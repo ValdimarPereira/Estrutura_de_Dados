@@ -1,0 +1,78 @@
+Exercícios
+
+1. Indique verdadeiro ou falso
+
+a) (v) O operador & permite-nos obter o endereço de uma
+variável. Permite também obter o endereço de um ponteiro.
+b) (v) Se x é um inteiro e ptr um ponteiro para inteiros e ambos
+contêm no seu interior o número 100, então x+1 e ptr+1
+apresentarão o número 101.
+c) (f) O operador * nos permite obter o endereço de uma
+variável.
+d) (v) Os ponteiros são variáveis que apontam para endereços
+na memória.
+
+2. Qual o resultado?
+
+cout << a << b << *ptr;
+R:imprimir a(5), b(7), ptr(5)
+
+3. Se fizermos ptr = &b, qual o resultado?
+cout << a << b << *ptr;
+R: a(5)ptr,b(7) *ptr(7).
+
+4. Se agora tivermos *ptr = 20, qual o resultado?
+R:(5),(20),(20)
+
+5. Qual caractere que se coloca na declaração de uma variável
+para indicar que ela é um ponteiro? Onde se coloca este
+caractere?
+R:*(asterisco)ptr.Esse caractere e utilizado antes da variável.
+
+6. O que contém uma variável do tipo ponteiro?
+R:Contem o endereço de outra variavél na memoria interna do computador.
+
+7. Faça um programa que crie um vetor de 10 inteiros, coloque
+valores nele e depois imprima todos os seus conteúdos na
+ordem normal e depois inversa. A impressão dos conteúdos
+deverá ser feita usando ponteiro.
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int  main ( int argc, char ** argv)
+{
+	int array[] = { 1 , 2 , 3 , 4 , 5 ,  6 , 7 , 8 , 9 , 10};
+	int * pArray = &array[0];
+
+
+
+	cout << * pArray << endl;
+	cout << endl;
+	
+	for(int i=0;i<10;i++){
+
+	   	cout << * pArray  << endl;
+		pArray ++;
+		
+
+	}
+
+
+
+		cout << "Ordem inversa: " << endl;
+
+	for (int i=0;i>=-10; i--)
+	{
+	cout << * pArray  << endl;
+		pArray --;
+		
+	}
+
+
+	return 0;
+}
+	
